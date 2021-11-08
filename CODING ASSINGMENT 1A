@@ -1,0 +1,34 @@
+package assingment;
+
+import java.util.Scanner;
+
+class Assingment1a {
+
+	public static void main(String[] args) {
+		try (// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in)) {
+			double interestRate;
+			int years;
+			double loanAmount;
+			int monthly;
+			double payment;
+			double total;
+			
+			System.out.print("Enter the yearly interest rate: ");
+			interestRate=input.nextDouble();
+			System.out.print("Enter the number of years     : ");
+			years=input.nextInt();
+			System.out.print("Enter the loan amount         : $");
+			loanAmount=input.nextDouble();
+			
+			monthly=years*12;
+			payment=(loanAmount*interestRate)/100;
+			total=payment*monthly;
+			
+			System.out.println("The monthly payment is $" + payment);
+			System.out.println("The total payment is $" + total);
+		}
+
+	}
+
+}
